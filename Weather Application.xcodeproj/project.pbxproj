@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6229845F2832573A003D83CE /* WeeklyWeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229845E2832573A003D83CE /* WeeklyWeatherForecast.swift */; };
 		6251FDE4283125F900B9C46A /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251FDE3283125F900B9C46A /* CurrentWeather.swift */; };
 		6251FDE8283156E600B9C46A /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251FDE7283156E600B9C46A /* GlobalHelper.swift */; };
 		6251FDEA2831673600B9C46A /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251FDE92831673600B9C46A /* HourlyForecast.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		3954B98173A064D1A3BB720F /* Pods_Weather_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6229845E2832573A003D83CE /* WeeklyWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherForecast.swift; sourceTree = "<group>"; };
 		6251FDE3283125F900B9C46A /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		6251FDE7283156E600B9C46A /* GlobalHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
 		6251FDE92831673600B9C46A /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				6251FDE3283125F900B9C46A /* CurrentWeather.swift */,
 				6251FDE92831673600B9C46A /* HourlyForecast.swift */,
+				6229845E2832573A003D83CE /* WeeklyWeatherForecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				626D7CB628311D7200E3FF92 /* ViewController.swift in Sources */,
 				626D7CB228311D7200E3FF92 /* AppDelegate.swift in Sources */,
 				6251FDEA2831673600B9C46A /* HourlyForecast.swift in Sources */,
+				6229845F2832573A003D83CE /* WeeklyWeatherForecast.swift in Sources */,
 				6251FDE4283125F900B9C46A /* CurrentWeather.swift in Sources */,
 				626D7CB428311D7200E3FF92 /* SceneDelegate.swift in Sources */,
 			);

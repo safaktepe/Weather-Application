@@ -13,7 +13,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
        
-        HourlyForecast.downloadDailyForecastWeather()
+        WeeklyWeatherForecast.downloadWeeklyForecastWeather { weeklyArray in
+            for forecast in weeklyArray {
+                print("forecast info: \(forecast.date) \t \(forecast.temp) \t \(forecast.weatherIcon)")
+            }
+        }
+        
+        
         
         
     }

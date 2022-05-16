@@ -37,24 +37,32 @@ class HourlyForecast {
     init(weatherDictionary: Dictionary<String, AnyObject>) {
         let json = JSON(weatherDictionary)
         self._temp = json["temp"].double
-        self._date = currentDateFromUnix(unixDate: json["ts"].double)
+        self._date = currentDateFromUnix(unixDate: json["ts"].double!)
         self._weatherIcon = json["weather"]["icon"].stringValue
     }
     
-    class func downloadDailyForecastWeather() {
-    let HOURLYFORECAST_URL  = "https://api.weatherbit.io/v2.0/forecast/hourly?city=Nicosia,CY&hours=24&key=1760a2c5f4294f9e96881a4f921a760b"
+    class func downloadHourlyForecastWeather(completion: @escaping (_ hourlyForecast: [HourlyForecast]) -> Void ){
+    let HOURLYFORECAST_URL  = "https://api.weatherbit.io/v2.0/forecast/hourly?city=Ankara,TR&hours=24&key=1760a2c5f4294f9e96881a4f921a760b"
         
         Alamofire.request(HOURLYFORECAST_URL).responseJSON { response in
             let result = response.result
             
+            var forecastArray: [HourlyForecast] = []
+            
             if result.isSuccess {
                 if let dictionary = result.value as? Dictionary<String, AnyObject> {
-                    //will countinue
+                    if let list = dictionary["data"] as? [Dictionary<String, AnyObject>] {
+                        for item in list {
+                            let forecast = HourlyForecast(weatherDictionary: item)
+                            forecastArray.append(forecast)
+                        }
+                    }
                 }
-
-                
-            } else {
+                completion(forecastArray)
+                 } else {
                 print("no forecast data")
+                completion(forecastArray)
+
             }
             
             

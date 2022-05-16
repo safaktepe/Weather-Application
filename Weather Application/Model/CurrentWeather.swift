@@ -108,7 +108,7 @@ class CurrentWeather {
     
     
     func getCurrentWeather(completion: @escaping(_ success: Bool) -> Void )  {
-        let LOCATIONAPI_URL  = "https://api.weatherbit.io/v2.0/current?city=Nicosia,CY&key=1760a2c5f4294f9e96881a4f921a760b"
+        let LOCATIONAPI_URL  = "https://api.weatherbit.io/v2.0/current?city=Ankara,TR&key=1760a2c5f4294f9e96881a4f921a760b"
         Alamofire.request(LOCATIONAPI_URL).responseJSON { response in
             let result = response.result
             if result.isSuccess {
